@@ -42,7 +42,7 @@ I'm a software engineering student and indie developer transitioning into cybers
 ## Highlighted Achievement
 
 > 🩸 **First Blood** on SOC335 (CVE-2024-49138) — LetsDefend's Customer Success Manager personally reached out requesting a community walkthrough due to high failure rates on this case.  
-> Published walkthrough: [shiplog.hashnode.dev](https://shiplog.hashnode.dev)
+> Published walkthrough: [shiplog.hashnode.dev]([https://shiplog.hashnode.dev](https://shiplog.hashnode.dev/soc335-cve-2024-49138-exploitation-detected-full-walkthrough))
 
 ---
 
