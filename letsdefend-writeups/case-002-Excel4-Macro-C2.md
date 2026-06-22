@@ -74,4 +74,4 @@ regsvr32 Invoked (Signed Binary Proxy Execution)
 
 ## Takeaway for Future Cases
 
-Excel 4.0 macro alerts deserve the full pivot every time | sandbox → log management → endpoint — instead of closing as TP/FP off the sandbox verdict alone. This case is a good reminder that the investigation doesn't end at "the file is malicious," it ends at "here's proof of what it actually did on a real machine."
+Excel 4.0 macro alerts deserve the full pivot every time | sandbox → log management → endpoint | instead of closing as TP/FP off the sandbox verdict alone. This case is a good reminder that the investigation doesn't end at "the file is malicious," it ends at "here's proof of what it actually did on a real machine."
