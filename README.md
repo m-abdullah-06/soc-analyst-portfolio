@@ -56,8 +56,8 @@ I'm a software engineering student and indie developer who's been moving into cy
 ## Currently Working On
 
 * [ ] Closing and documenting more LetsDefend cases
-* [ ] ISC2 CC certification prep
-* [ ] Azure AZ-500 certification prep
+* [ ] ISC2 CC certification prep 
+* [ ] Security Operations Analyst SC-200 certification prep
 
 ---
 
