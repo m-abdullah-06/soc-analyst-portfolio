@@ -57,7 +57,7 @@ I'm a software engineering student and indie developer who's been moving into cy
 
 * [ ] Closing and documenting more LetsDefend cases
 * [ ] ISC2 CC certification prep 
-* [ ] Security Operations Analyst SC-200 certification prep
+* [ ] SC-900 certification prep
 
 ---
 
