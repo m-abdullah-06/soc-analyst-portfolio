@@ -241,7 +241,7 @@ Phishing Email
 
 ```
 [██████████]  SC-900             Done ✅
-[████████░░]  ISC2 CC            Domains cleared — Exam pending
+[██████████]  ISC2 CC            Done ✅
 [░░░░░░░░░░]  SC-200             Queued
 [████░░░░░░]  LetsDefend Cases   Ongoing — documenting as I go
 [███░░░░░░░]  KQL                In progress
