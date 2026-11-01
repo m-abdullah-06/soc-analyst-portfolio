@@ -1,52 +1,44 @@
 # PHP2Shell | References
 
-The PHP project advisories are the primary technical sources. Vendor advisories and threat briefs provide deployment and defensive context. The DEV article is my original practical lab walkthrough, not an authoritative source for CVE classification.
+The PHP project's own security advisories are the primary technical sources. Vendor and national CERT material provides deployment and operational context. My DEV article is an original lab walkthrough, not an authoritative source for CVE classification.
 
 ## Primary Sources
 
 1. **PHP project — Security advisory: Critical remote code execution vulnerabilities, update now**  
-   https://www.php.net/  
-   Official summary of affected configurations, root causes and fixed PHP releases.
-
-2. **PHP source advisory — CVE-2026-109618 (GHSA-w8hw-w9fx-j79w)**  
-   https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w  
-   Primary advisory for OOM-related request-state corruption.
-
-3. **PHP source advisory — CVE-2026-109619 (GHSA-6wmf-4rv5-p3rp)**  
-   https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp  
-   Primary advisory for stale global state referencing freed request memory.
-
-4. **PHP News Archive — 21 October 2026**  
    https://www.php.net/archive/2026.php#2026-10-21-5  
-   Official release information for the fixed PHP versions.
+   Official summary of affected PHP web-serving configurations, both root causes and fixed releases.
 
-## Defensive and Vendor Context
+2. **PHP source advisory — RCE via OOM corruption (CVE-2026-109618, GHSA-w8hw-w9fx-j79w)**  
+   https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w  
+   Primary technical description of the OOM bailout and partially initialized request-state issue.
 
-5. **NHS England Digital — Critical Vulnerabilities in PHP (PHP2Shell)**  
-   https://digital.nhs.uk/cyber-alerts/2026/cc-4875/cc-4875  
-   Summarizes affected releases, vulnerability mechanics, exploitation context and remediation guidance.
+3. **PHP source advisory — RCE via stale global state (CVE-2026-109619, GHSA-6wmf-4rv5-p3rp)**  
+   https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp  
+   Primary technical description of request-owned state surviving beyond the lifetime of its backing memory, including confirmed lifecycle cases and mitigation limitations.
 
-6. **Sophos — Advisory: PHP2Shell Vulnerabilities (CVE-2026-109618, CVE-2026-109619)**  
-   https://www.sophos.com/en-us/security-advisories/sophos-sa-20261021-php2shell  
-   Includes runtime inventory recommendations, hunting ideas and patch guidance. Vendor guidance is useful context; validate details against the PHP project and your own environment.
+4. **PHP News Archive — 21 October 2026 security releases**  
+   https://www.php.net/archive/2026.php  
+   Official release announcements for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35.
 
-7. **Palo Alto Networks Unit 42 — Threat Brief: Critical Vulnerabilities in PHP**  
-   https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/  
-   Threat context and exploitation observations, updated 29 October 2026.
+## Vendor and Operational Context
 
-8. **Plesk — PHP2Shell: Remote code execution in PHP shipped with Plesk**  
+5. **Plesk — PHP2Shell: Remote code execution in PHP shipped with Plesk**  
    https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-PHP2Shell-Remote-code-execution-in-PHP-shipped-with-Plesk  
-   Useful for understanding bundled PHP and vendor-specific patch status.
+   Example of vendor-specific PHP packaging and patched builds, including legacy build-date distinctions.
+
+6. **NCSC-NL — PHP2Shell operational information**  
+   https://github.com/NCSC-NL/php2shell  
+   Operational tracking of affected products and remediation status.
 
 ## Original Research and Lab Walkthrough
 
-9. **Muhammad Abdullah — PHP2Shell: When a Simple Upload Feature Turns Into Remote Code Execution**  
+7. **Muhammad Abdullah — PHP2Shell: When a Simple Upload Feature Turns Into Remote Code Execution**  
    https://dev.to/mabdullah06/php2shell-when-a-simple-upload-feature-turns-into-remote-code-execution-1ki1  
    My TryHackMe lab walkthrough, environment observations and learning notes (31 October 2026).
 
 ## Source Handling Notes
 
-- CVE descriptions and fixed releases in this folder follow the PHP project's advisories.
-- Vendor advisories can lag or differ because products bundle PHP and ship vendor-specific builds. Check the vendor's current product advisory before remediation.
-- The lab's memory-disclosure and address-discovery stages are observations from the supplied exercise. They are not a replacement for the PHP project's root-cause descriptions.
-- Recheck all URLs and release guidance before using this document as an operational change plan.
+- CVE descriptions and upstream fixed releases in this folder follow the PHP project's own advisories.
+- Vendor appliances and distribution packages may ship backports or builds whose version strings differ from upstream. Verify the vendor's advisory and the actual running web-serving binary.
+- The lab's memory/address-discovery stages are observations from the supplied exercise, not replacements for the PHP project's root-cause descriptions.
+- Recheck advisories and vendor packaging before using this document as an operational change plan.
