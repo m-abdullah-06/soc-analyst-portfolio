@@ -131,11 +131,11 @@ Phishing Email
 
 ## `[THREAT RESEARCH]` — Independent Vulnerability Research
 
-| Research | Focus | Documentation |
-|---|---|---|
-| **PHP2Shell** — CVE-2026-109618 / CVE-2026-109619 | PHP runtime memory-safety flaws · OOM handling · stale global state · RCE · Detection & SOC response | [→ Research folder](./threat-research/php2shell/) · [Technical Analysis](./threat-research/php2shell/technical-analysis.md) · [Detection Engineering](./threat-research/php2shell/detection-engineering.md) |
+Independent vulnerability analysis, authorized lab investigations and defensive research — organized by topic.
 
-> Independent research and authorized lab validation, separate from simulated SOC alert writeups. [Read the original DEV article](https://dev.to/mabdullah06/php2shell-when-a-simple-upload-feature-turns-into-remote-code-execution-1ki1).
+**[→ Browse Threat Research Library](./threat-research/)**
+
+> Separate from simulated SOC alert writeups. Each research topic has its own folder, technical notes, lab evidence and defensive analysis.
 
 ---
 
